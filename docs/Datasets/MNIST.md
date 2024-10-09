@@ -1,6 +1,6 @@
 # MNIST Dataset Overview
 
-![MNIST](./../Imgs/mnist_general.jpg)
+![MNIST](./../../imgs/MNIST.jpg)
 
 The **MNIST (Modified National Institute of Standards and Technology)** dataset is a widely used dataset in the field of machine learning and computer vision. It is primarily utilized for training and testing various image processing and machine learning algorithms, particularly in the context of handwritten digit recognition.
 
