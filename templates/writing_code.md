@@ -7,7 +7,7 @@
 Organize class definitions and methods in the following order:
 
 1. **Class Docstring**: Provide a brief overview of the class.
-2. **`__init__`**: Define the initializer method after the class docstring. 
+2. **`__init__`**: Define the initializer method after the class docstring.
 3. **Properties**: Include properties immediately after the `__init__` method.
 4. **Special Methods (Dunder Methods)**: Include methods like `__repr__`, `__call__`, etc.
 5. **Public Methods**: Methods intended for public use should follow the special methods.
@@ -38,7 +38,7 @@ class Template(parent):
     def example_property(self) -> Type:
         """Description of the property."""
         ...
-    
+
     @example_property.setter
     def example_property(self, value: Type) -> None:
         """Set the property value."""
@@ -52,7 +52,7 @@ class Template(parent):
             str: A string describing the instance.
         """
         ...
-    
+
     def __call__(self, *args, **kwargs) -> ReturnType:
         """
         Perform an action when the instance is called.
@@ -69,11 +69,11 @@ class Template(parent):
     def public_method(self, *args, **kwargs) -> ReturnType:
         """Description of a public method."""
         ...
-    
+
     def another_public_method(self, *args, **kwargs) -> ReturnType:
         """Description of another public method."""
         ...
-    
+
     def __private_method(self, *args, **kwargs) -> ReturnType:
         """Description of a private/internal method."""
         ...
@@ -87,11 +87,11 @@ class Template(parent):
 
 Each method, property, and class should be documented with a clear and concise docstring. Docstrings should include:
 
-- **Brief description** of the component's functionality.
-- **Explanation** (for complex structures).
-- **Arguments** (for methods and functions) specifying names and expected types.
-- **Returns** (for methods and functions) specifying the type of value returned.
-- **Exceptions** (if applicable) that the component may raise.
+-   **Brief description** of the component's functionality.
+-   **Explanation** (for complex structures).
+-   **Arguments** (for methods and functions) specifying names and expected types.
+-   **Returns** (for methods and functions) specifying the type of value returned.
+-   **Exceptions** (if applicable) that the component may raise.
 
 #### Example:
 
@@ -115,10 +115,10 @@ def public_method(self, arg1: Type1, arg2: Type2) -> ReturnType:
 
 ### 3. Naming Conventions
 
-- **Class Names**: Use CamelCase format.
-- **Method and Variable Names**: Use snake_case format.
-- **Constants**: Use uppercase with underscores.
-- **Dunder Methods**: Always preceded and followed by double underscores (`__init__`, `__repr__`, etc.).
+-   **Class Names**: Use CamelCase format.
+-   **Method and Variable Names**: Use snake_case format.
+-   **Constants**: Use uppercase with underscores.
+-   **Dunder Methods**: Always preceded and followed by double underscores (`__init__`, `__repr__`, etc.).
 
 #### Example:
 
@@ -163,8 +163,8 @@ def example_property(self) -> Type:
     """Description of the property."""
     ...
 
-@example_property.setter 
-def example_property(self, arg1: Type) -> None: 
+@example_property.setter
+def example_property(self, arg1: Type) -> None:
     if arg1:
         self._example_property = arg1
 ```
@@ -197,9 +197,9 @@ def __private_method(self, *args, **kwargs) -> ReturnType:
 
 Methods prefixed with a single underscore (`_`) are intended for internal use within the class but are not strictly private. These methods are used to support the core functionality of the class and should:
 
-- **Be Documented**: Each method should have a docstring that clearly describes its purpose, arguments, and return values.
-- **Not Be Part of the Public API**: They are meant for internal use within the class or module and should not be exposed as part of the public API.
-- **Be Well-Named**: Use descriptive names that indicate their purpose without being overly verbose.
+-   **Be Documented**: Each method should have a docstring that clearly describes its purpose, arguments, and return values.
+-   **Not Be Part of the Public API**: They are meant for internal use within the class or module and should not be exposed as part of the public API.
+-   **Be Well-Named**: Use descriptive names that indicate their purpose without being overly verbose.
 
 #### Example:
 
@@ -224,8 +224,7 @@ def _helper_method(self, param1: Type1, param2: Type2) -> ReturnType:
 
 ## Additional Guidelines
 
-- **Import Statements**: Group standard library imports, third-party imports, and local imports separately, with a blank line between each group.
-- **Line Length**: Limit lines to 79 characters to enhance readability.
-- **Formatting**: Adhere to PEP 8 guidelines for formatting, including indentation, spacing, and blank lines.
-- **Error Handling**: Use exception handling judiciously to manage expected errors and avoid silent failures.
-
+-   **Import Statements**: Group standard library imports, third-party imports, and local imports separately, with a blank line between each group.
+-   **Line Length**: Limit lines to 79 characters to enhance readability.
+-   **Formatting**: Adhere to PEP 8 guidelines for formatting, including indentation, spacing, and blank lines.
+-   **Error Handling**: Use exception handling judiciously to manage expected errors and avoid silent failures.
